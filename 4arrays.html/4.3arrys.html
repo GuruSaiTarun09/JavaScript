@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const menu = [
+            { id: 1, name: "Masala Dosa", cuisine: "South Indian", category: "Main", price: 120, rating: 4.6, veg: true, spicyLevel: 2, calories: 420, available: true },
+            { id: 2, name: "Paneer Tikka", cuisine: "North Indian", category: "Starter", price: 199, rating: 4.7, veg: true, spicyLevel: 3, calories: 350, available: true },
+            { id: 3, name: "Chicken Biryani", cuisine: "Hyderabadi", category: "Main", price: 259, rating: 4.5, veg: false, spicyLevel: 4, calories: 640, available: true },
+            { id: 4, name: "Veg Fried Rice", cuisine: "Chinese", category: "Main", price: 150, rating: 4.1, veg: true, spicyLevel: 1, calories: 520, available: true },
+            { id: 5, name: "Chicken Manchurian", cuisine: "Chinese", category: "Starter", price: 220, rating: 4.2, veg: false, spicyLevel: 3, calories: 480, available: false },
+            { id: 6, name: "Margherita Pizza", cuisine: "Italian", category: "Main", price: 299, rating: 4.3, veg: true, spicyLevel: 0, calories: 700, available: true },
+            { id: 7, name: "Pepperoni Pizza", cuisine: "Italian", category: "Main", price: 349, rating: 4.4, veg: false, spicyLevel: 1, calories: 800, available: true },
+            { id: 8, name: "Pani Puri", cuisine: "Street Food", category: "Snack", price: 60, rating: 4.5, veg: true, spicyLevel: 5, calories: 250, available: true },
+            { id: 9, name: "Caesar Salad", cuisine: "Continental", category: "Salad", price: 180, rating: 4.0, veg: true, spicyLevel: 0, calories: 200, available: true },
+            { id: 10, name: "Gulab Jamun", cuisine: "Indian", category: "Dessert", price: 99, rating: 4.8, veg: true, spicyLevel: 0, calories: 300, available: true },
+            { id: 11, name: "Tacos (Paneer)", cuisine: "Mexican", category: "Snack", price: 210, rating: 4.2, veg: true, spicyLevel: 2, calories: 380, available: false },
+            { id: 12, name: "Fish Fry", cuisine: "Coastal", category: "Starter", price: 240, rating: 4.1, veg: false, spicyLevel: 3, calories: 420, available: true },
+            { id: 13, name: "Idli Sambar", cuisine: "South Indian", category: "Breakfast", price: 50, rating: 4.3, veg: true, spicyLevel: 1, calories: 250, available: true },
+            { id: 14, name: "Egg Roll", cuisine: "Street Food", category: "Snack", price: 80, rating: 4.2, veg: false, spicyLevel: 2, calories: 320, available: true },
+            { id: 15, name: "Veg Momos", cuisine: "Tibetan", category: "Snack", price: 120, rating: 4.4, veg: true, spicyLevel: 3, calories: 280, available: true },
+            { id: 16, name: "Chicken Momos", cuisine: "Tibetan", category: "Snack", price: 150, rating: 4.5, veg: false, spicyLevel: 3, calories: 310, available: true },
+            { id: 17, name: "Brownie with Ice Cream", cuisine: "Dessert", category: "Dessert", price: 160, rating: 4.7, veg: true, spicyLevel: 0, calories: 450, available: true },
+            { id: 18, name: "Hakka Noodles", cuisine: "Chinese", category: "Main", price: 180, rating: 4.1, veg: true, spicyLevel: 2, calories: 550, available: true },
+            { id: 19, name: "Butter Chicken", cuisine: "North Indian", category: "Main", price: 320, rating: 4.6, veg: false, spicyLevel: 2, calories: 720, available: true },
+            { id: 20, name: "Falooda", cuisine: "Indian", category: "Dessert", price: 140, rating: 4.3, veg: true, spicyLevel: 0, calories: 360, available: true }
+        ];
+            //show the memu to users
+            let dishnames = menu. map(menu=>menu.name);
+            console.log(dishnames);
+
+            //show price board
+            let pricedetails = menu.map(menu=>menu.price);
+            console.log(pricedetails);
+
+            //customer view format
+            let viewpiont = menu. map(menu=>'(menu.name)(menu.price)');
+            console.log(viewpiont);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

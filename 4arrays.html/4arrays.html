@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //create
+        var names = ['guru', 'sai', 'tarun'];
+
+        //print
+        console.log(names);
+
+        //select
+        console.log(names[0]);
+
+        //update
+        names[1]='bhanu';
+        console.log(names);
+
+        //insert
+        names[3]="dinesh";
+        console.log(names);
+
+        //delete
+        delete names[2];
+        console.log(names);
+
+
+
+
+
+        //arrays
+        var ages=[10,20,30,40,50,60];
+
+        //select subset (last index excluded)
+        console.log( ages.slice(0,3));
+
+        //check existance
+        console.log(ages.includes(40));
+        console.log(ages.includes(440));
+        
+        //check location/index
+        console.log(ages.indexOf(40));
+        console.log(ages.indexOf(444));
+
+        //reverse
+        console.log(ages.reverse());
+
+        //remove at end
+        ages.pop();
+        console.log(ages);
+
+        //add at end
+        ages.push(70);
+        console.log(ages);
+
+        //remove at first
+        ages.shift();
+        console.log(ages);
+
+        //add at first
+        ages.unshift(90);
+        console.log(ages)
+
+        var ids = [10,20,30,40,50,60];
+
+        //length
+        console.log("size="+ids.length);
+
+        //delete at any place
+        ids.splice(2,2);
+
+        //add at any place 
+        ids.splice(2,2,33,44);
+        console.log(ids);
+
+        // ids.splice(1,0,40,50,60);
+        // console.log(ids);
+
+        //array to string
+        console.log(ids.join(""));
+        console.log(ids.join("-"));
+
+        //string to array
+        let name = "i am javascript";
+        console.log(name.split("")); // character array
+        console.log(name.split(" ")); // words array
+        console.log(name.split("a")); 
+
+        //reverse a string
+        let state = "andra pradesh";
+        console.log(state.split("").reverse().join(""));
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

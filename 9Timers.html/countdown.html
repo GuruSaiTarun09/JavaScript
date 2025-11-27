@@ -1,0 +1,31 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        
+        <h1 id="display"></h1>
+
+
+
+        <script>
+
+            var count = 120;
+            var interval;
+            interval = setInterval(() => {
+                count--;
+                var minutes = parseInt(count/60);
+                var seconds = count%60;
+
+                document.getElementById("display").innerText = minutes + ":" + seconds;
+
+                if(minutes==0 && seconds==0){
+                    clearInterval(interval);
+                }
+
+            }, 100);
+
+        </script>
+
+    </body>
+</html>

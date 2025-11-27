@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // create
+        var user = {
+            name:"Ravi",
+            age:20,
+            id:22
+        }
+        //print
+        console.log(user);
+
+        //select
+        console.log(user.name);
+
+        //update
+        user.age = 25;
+        console.log(user);
+
+        //insert
+        user.phone = 9896589658;
+        console.log(user);
+
+        //delete
+        delete user.id;
+        console.log(user);
+
+        //ARRAY OF OBJECTS
+        let users = [
+            {name:"guru",age:50},
+            {name:"sai", age:30},
+            {name:"tarun", age:40},
+        ]
+
+        //print
+        console.log(users)
+
+        let emp={
+            name:"john",
+            age:20,
+            isindian:true,
+            phones:[6565,4554],
+            address:{
+                state:"TG",
+                pin:500030
+            }
+        }
+
+        //how to print TG
+        console.log(emp.address.state);
+
+        //how to print 4554
+        console.log(emp.phones[1]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

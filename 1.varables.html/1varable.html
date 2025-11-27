@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //create
+        var age = 20;
+        var phone = 888;
+        // print
+        console.log(age);
+        console.log(phone);
+
+        //pass by value (number, strings, boolean, undefined)
+        console.log(2 == 2);
+        console.log("abc" == "abc");
+        console.log(true == true);
+        console.log(undefined == undefined);
+
+        //pass by refernce/addres(array / object)
+        console.log([1,2]==[1,2]);
+        console.log({name:'a'}=={name:'a'});
+
+        // Data types
+        console.log("---------------")
+        console.log(typeof(2));
+        console.log(typeof("abc"));
+        console.log(typeof(true));
+        console.log(typeof(undefined));
+
+        console.log(typeof("333"));
+        console.log(typeof("@@@@"));
+        console.log(typeof("true"));
+        console.log(typeof("undifiend"));
+
+        console.log(typeof({name:'guru'}));
+        console.log(typeof([1,2,3,4,]));
+
+        console.log(2+3);
+        console.log("2"+"3");
+        console.log(true+"abc");
+        console.log(undefined+"abc");
+
+        console.log(true+true);
+        console.log(5+true);
+        console.log(5-true);
+        console.log(5+false);
+        console.log(5-false);
+
+        console.log(5+undefined);
+        console.log(undefined+undefined);
+        console.log([1,2,3]+[4,5,6]);
+        console.log({age:200}+{age:30});
+
+
+    </script>
+</head>
+
+<body>
+    <!-- 
+    1)var does not support block scope , but let support 
+    2)var can be duplicated, but not let
+    3)var can be acces  befoore declaration but not let
+    4) const can not reinitialize but var, let can-->
+</body>
+
+</html>

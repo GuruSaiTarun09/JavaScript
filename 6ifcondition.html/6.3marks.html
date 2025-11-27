@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function totalmarks() {
+
+            var telugu = document.getElementById("telugu").valueAsNumber;
+            var maths = document.getElementById("maths").valueAsNumber;
+            var science = document.getElementById("science").valueAsNumber;
+            var hindi = document.getElementById("hindi").valueAsNumber;
+            var english = document.getElementById("english").valueAsNumber;
+            var social = document.getElementById("social").valueAsNumber;
+            var total = telugu + maths + science + hindi + english + social;
+            document.getElementById("result").innerText = "Total Marks = " + total + " / 600";
+
+            var percentage = (total / 600) * 100;
+            document.getElementById("percent").innerText = "Percentage = " + percentage + "%";
+
+             if (percentage >=100 && percentage <=90) {
+                document.getElementById("grade").innerText = "A+"
+            }
+            else if (percentage <= 90 && percentage >= 80) {
+                document.getElementById("grade").innerText = "A"
+            }
+            else if (percentage <= 80 && percentage >= 70) {
+                document.getElementById("grade").innerText = "B"
+            }
+            else if (percentage <=70 && percentage >= 60) {
+                document.getElementById("grade").innerText = "C"
+            }
+            else if (percentage <=60 && percentage >=50) {
+                document.getElementById("grade").innerText = "D"
+            }
+
+            else {
+                document.getElementById("grade").innerText = "fail"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Marks</h1>
+        <label for="">telugu:</label>
+        <input type="number" id="telugu">
+        <br><br>
+        <label for="">maths:</label>
+        <input type="number" id="maths">
+        <br><br>
+        <label for="">science:</label>
+        <input type="number" id="science">
+        <br><br>
+        <label for="">hindi:</label>
+        <input type="number" id="hindi">
+        <br><br>
+        <label for="">english:</label>
+        <input type="number" id="english">
+        <br><br>
+        <label for="">social:</label>
+        <input type="number" id="social">
+        <br><br>
+        <button onclick="totalmarks()">total marks</button>
+        <button onclick="percent()">percentage</button>
+        <button>grade</button>
+        <button>reset</button>
+        <h1 id="result">_______/600</h1>
+        <h1 id="percent">________%</h1>
+        <h1 id="grade">_____</h1>
+    </div>
+</body>
+
+</html>

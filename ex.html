@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock, Counter, Timer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ========== CLOCK ==========
+        setInterval(() => {
+            var now = new Date();
+            document.getElementById('display').innerText = now;
+        }, 1000);
+
+        // ========== COUNTER ==========
+        var count = 0;
+        var interval;
+
+        function start() {
+            interval = setInterval(() => {
+                count++;
+                document.getElementById("result1").innerText = count;
+            }, 1000);
+        }
+        function stop() {
+            clearInterval(interval);
+        }
+        //timer
+        var interval2;
+        function startTimer() {
+            var count2 = document.getElementById("timerUpto").valueAsNumber;
+            var count22 = 0;
+            interval2 = setInterval(() => {
+                count22++;
+                document.getElementById("timerResult").innerText = count22;
+                if (count22 >= count2) {
+                    clearInterval(interval2);
+                }
+            }, 1000);
+        }
+        function stopTimer() {
+            clearInterval(interval2);
+        }
+
+        // COUNTDOWN
+        var interval1;
+        function startDown() {
+            var count1 = document.getElementById("startDown").valueAsNumber;
+            interval1 = setInterval(() => {
+                count1--;
+                var minutes = parseInt(count1 / 60);
+                var seconds = count1 % 60;
+                document.getElementById("result2").innerText = minutes + ":" + seconds;
+                if (count1 <= 0) {
+                    clearInterval(interval1);
+                }
+            }, 1000);
+        }
+        function stopDown() {
+            clearInterval(interval1);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid mt-3 text-center">
+        <h2> Live Clock</h2>
+        <h1 id="display" class="mb-4"></h1>
+
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+
+                    <!-- Counter -->
+                    <div class="col bg-secondary text-white p-3 m-2 rounded">
+                        <h3>Counter</h3>
+                        <label>Upto:</label>
+                        <input type="number" id="countUpto"> Sec<br><br>
+                        <button onclick="start()">Start</button>
+                        <button onclick="stop()">Stop</button>
+                        <h5 id="result1">Result</h5>
+                    </div>
+
+                    <!-- Timer -->
+                    <div class="col bg-danger text-white p-3 m-2 rounded">
+                        <h3>Timer</h3>
+                        <label>Upto:</label>
+                        <input type="number" id="timerUpto"> Sec<br><br>
+                        <button onclick="startTimer()">Start</button>
+                        <button onclick="stopTimer()">Stop</button>
+                        <h5 id="timerResult">Result</h5>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="col bg-success text-white p-3 m-2 rounded">
+                        <h3>Countdown</h3>
+                        <label>From:</label>
+                        <input type="number" id="startDown"> Sec<br><br>
+                        <button onclick="startDown()">Start</button>
+                        <button onclick="stopDown()">Stop</button>
+                        <h5 id="result2">Result</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

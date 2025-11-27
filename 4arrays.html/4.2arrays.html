@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const students = [
+            { id: 1, name: "Aarav", age: 20, grade: "A", marks: 88, course: "JavaScript", feesPaid: true },
+            { id: 2, name: "Ananya", age: 22, grade: "B", marks: 72, course: "Python", feesPaid: false },
+            { id: 3, name: "Rohan", age: 19, grade: "A", marks: 91, course: "JavaScript", feesPaid: true },
+            { id: 4, name: "Meera", age: 21, grade: "C", marks: 65, course: "Java", feesPaid: true },
+            { id: 5, name: "Vikram", age: 23, grade: "B", marks: 78, course: "Python", feesPaid: false },
+            { id: 6, name: "Sara", age: 20, grade: "A", marks: 95, course: "Java", feesPaid: true },
+            { id: 7, name: "Kabir", age: 18, grade: "B", marks: 81, course: "JavaScript", feesPaid: true },
+            { id: 8, name: "Riya", age: 22, grade: "C", marks: 60, course: "Python", feesPaid: false },
+            { id: 9, name: "Arjun", age: 21, grade: "A", marks: 89, course: "Java", feesPaid: true },
+            { id: 10, name: "Isha", age: 19, grade: "B", marks: 77, course: "JavaScript", feesPaid: true }
+        ];
+
+        //map questions
+        //Get list of student names
+        var names = students.map(students => students.name);
+        console.log(names);
+
+        //Get array of marks only
+        var marks = students.map(students => students.marks);
+        console.log(marks);
+
+        //Convert names to uppercase
+        var upperNames = students.map(students => students.name.toUpperCase());
+        console.log(upperNames);
+
+        //Return objects { name, marksPercentage } (marks out of 100)
+        var nameMarks = students.map(students => ({ name: students.name, marksPercentage: students.marks }));
+        console.log(nameMarks);
+
+        //	Return "Aarav - JavaScript - 88 marks"
+
+        //Filter question
+        //Students scored > 80
+        var highscores = students.filter(students => students.marks > 80);
+        console.log(highscores);
+
+        //Students enrolled in JavaScript
+        var jssnames = students.filter(students => students.course === "JavaScript");
+        console.log(jssnames);
+
+        //Students with grade "A"
+        var grade = students.filter(students => students.grade === "A");
+        console.log(grade);
+
+        //Students who paid fees
+        var feespaidlist = students.filter(students => students.feesPaid === true);
+        console.log(feespaidlist);
+
+        //Students below age 21
+        var aboveage21 = students.filter(students => students.age > 21);
+        console.log(aboveage21);
+
+        //SORT Questions
+        //Marks — high → low
+        var markshightolow = students.sort((a, b) => b.marks - a.marks);
+        console.log(markshightolow);
+
+        //Marks — low → high
+        var markslowtohigh = students.sort((a, b) => a.marks - b.marks);
+        console.log(markslowtohigh);
+
+        //Age — youngest → oldest
+        var agesort = students.sort((a, b) => a.age - b.age);
+        console.log(agesort);
+        //Name — alphabetical
+        var namesort = students.sort((a, b) => a.name.localeCompare(b.name));
+        console.log(namesort);       
+        //Grade — A → B → C
+        // var gradesort = students.sort((a, b) => gradesort[a.grade]-gradesort[a.grade] );
+        // console.log(gradesort);
+  
+        //REDUCE Questions
+        //Find total marks of class
+        var totalmarks = students.reduce((sum,students)=>sum+students.marks,0);
+        console.log(totalmarks);
+        //Find average marks
+        var findavgmarks = totalmarks/students.length;
+        console.log(findavgmarks);
+        //Count students by course
+        // (e.g., {JavaScript: 3, Python: 3, Java: 3})
+
+        //Count how many paid fees
+
+        //Total marks of JavaScript course students only
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

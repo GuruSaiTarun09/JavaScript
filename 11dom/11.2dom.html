@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function area(){
+            //read
+            var length =document.getElementById("length").value;
+
+            //write
+            document.getElementById("result1").innerText = "Area is" + (length*length);
+        }
+        function perimeter(){
+            //read
+            var length= document.getElementById("length").value;
+
+            //write
+            document.getElementById("result2").innerText = "perimeter is"+(4*length);
+        }
+    </script>
+</head>
+<body>
+    <h1>Square</h1>
+
+    <label for="">Length:</label> 
+    <input id="length" type="text">
+
+    <button onclick="area()">area</button>
+    <button onclick="perimeter()">perimeter</button>
+
+    <h1 id="result1">______</h1>
+    <h1 id="result2">______</h1>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function wish(){
+            //read
+            var name = document.getElementById("name").value;
+
+            //write
+            document.getElementById("result").innerText = "Hello"+name;
+        }
+    </script>
+</head>
+<body>
+    <h1>wish me</h1>
+    <label for="">Name:</label>
+    <input id="name" type="text">
+    <button onclick="wish()">wish me</button>
+    
+
+    <h1 id="result">_____</h1>
+</body>
+</html>

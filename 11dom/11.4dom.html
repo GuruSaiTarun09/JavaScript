@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var c;
+        var f;
+        // read
+        function converter() {
+            var c = document.getElementById("input1").valueAsNumber;
+            // write
+            document.getElementById("result1").innerText = "Converted temperature is c " + (c*9/5 + 32);
+        }
+                function converter2() {
+            var f = document.getElementById("input2").valueAsNumber;
+            // write
+            document.getElementById("result2").innerText = "Converted temperature is f " + ((f - 32) * 5/9);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Celcius to fahrenheit converter</h1>
+    <input  type="number" name="" id="input1">
+    <button onclick="converter()">converter</button>
+    <h3 id="result1">_______</h3>
+    <h1>fahrenheit to Celcius converter</h1>
+    <input type="number" name="" id="input2">
+    <button onclick="converter2()">converter</button>
+    <h3 id="result2">_______</h3>
+</body>
+
+</html>
