@@ -1,14 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        alert("page error 404")
+      // access array element??
+      let arr = ["a", "b", "c"];
+      console.log(arr[0]);
+      console.log(arr[2]);
+      console.log(arr.length);
+
+      //can you hold mixed data?
+      const arr1 = [1, "a", true, {}, []];
+      console.log(["abc", "abc"]); //string
+      console.log(["123", "123"]); //number
+      console.log(["true", "false"]); //boolean
+      console.log(["{}", "{}"]); //objects
+      console.log(["[]", "[]"]); //array
+
+      //how to check if an variable is an array of not??
+      const a = 123;
+      console.log(Array.isArray(a));
+
+      const b = [1, 2, 3];
+      console.log(Array.isArray(b));
+
+      //what is type of array
+      // array data type is object
+      console.log(typeof [1, 2, 3]);
+
+      //explain about array methods??
+      //push add at the end
+      let a0 = [1, 2];
+      a0.push(3);
+      console.log(a0);
+      //pop remove at the end
+      let a1 = [1, 2, 3];
+      a1.pop();
+      console.log(a1);
+      //shift remove from start
+      let a2 = [1, 2, 3];
+      a2.shift();
+      console.log(a2);
+      //unshift add to start
+      let a3 = [1, 2, 3, 4, 5];
+      a3.unshift(2);
+      console.log(a3);
+      //   splice remove at any space
+      let a4 = [1, 2, 3, 4, 5];
+      a4.splice(1, 2);
+      console.log(a4);
+      /////add at any place
+      let a5 = [1, 2, 3, 4, 5];
+      a5.splice(2, 0, 9);
+      console.log(a5);
+
+
+      //at access by index
+      let a6 = [1, 2, 3, 4, 5];
+      console.log(a6.at(0));
+      //slice copy portion
+      console.log(a6.slice(3, 5));
+      //copywithin copy inside the array
+      console.log(a6.copyWithin(0, 2, 4));
+
+
+      //includes value exists
+      let a7 = [1, 2, 3, 2];
+      console.log(a7.includes(2));
+      //index of first letter
+      console.log(a7.indexOf(2));
+      //lastindexof last index
+      console.log(a7.lastIndexOf(2));
+
+
+      //keys index iterator
+      let a8 = [4, 5, 6];
+      for (let key of a8.keys()) {
+        console.log(key);
+      }
+      //values of values iterator
+      for (let value of a8.values()) {
+        console.log(value);
+      }
+      //entries index+values
+      for (let entry of a8.entries()) {
+        console.log(entry);
+      }
+
+
+      //join array->string
+      let a9 = [1, 2, 3];
+      console.log(a9.join("-"));
+      //split string->array
+      let a10 = "abc";
+      console.log(a10.split(""));
+      //to string array -> string
+      console.log(a9.toString(""));
+      //fill fill values
+      console.log(a9.fill(0));
+      //array.isArray check array
+      let a11 = [1, 2];
+      console.log(Array.isArray(a11));
+      // array .from -> from iterable
+      console.log(Array.from("abc"));
+      //array of -> from values
+      console.log(Array.of(1,2,3))
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

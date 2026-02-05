@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var amount=[10,20,30,40,50,60];
+        //map - alter every element
+        var someamount = amount.map(amount =>amount+5);
+        console.log(someamount);
+        //filter - select some
+        var highamount=amount.filter(amount=>amount>20);
+        console.log(highamount);
+        //sort - asc(a-b)/desc(b-a) order
+        amount.sort((a,b)=>(a-b));
+        console.log(amount);
+        //desc order
+        amount.sort((a,b)=>(b-a));
+        console.log(amount);
+        // reduce - single (total)
+        var totalamount=amount.reduce((sum,amount)=>sum+amount,0);
+        console.log(totalamount);
+
+        
+            var products = [
+                {name:'pen', price:10, rating:4, category:'book'},
+                {name:'iphone 17', price:120000, rating:4.5, category:'mobiles'},
+                {name:'samsung f16', price:10000, rating:4.2, category:'mobiles'},
+                {name:'samsung 3g', price:80000, rating:4.1, category:'mobiles'},
+                {name:'samsung flip', price:40000, rating:3, category:'mobiles'},
+                {name:'puma', price:1000, rating:3.5, category:'footware'},
+                {name:'crocs', price:3000, rating:4.2, category:'footware'},
+                {name:'t-shirt', price:1000, rating:2.5, category:'mensware'},
+            ];
+
+            //find 
+            console.log(products.find(product =>product.price==120000));
+
+            //some:true/false
+            console.log(products.some(product=>product.price<50));
+
+            //every:true/false
+            console.log(products.every(product=>product.rating>4.5));
+
+            //map
+            changes = products.map(product=>product.price+20);
+            console.log(changes);
+
+            productwithprice=products.map(product=>{
+                product.price=product.price+20;
+                return product;
+            });
+            console.log(productwithprice);
+
+            //filter
+            below5kproduct=products.filter(product=>product.price<5000);
+            console.log(below5kproduct);
+
+            //sort
+            priceLH=products.sort((a,b)=>b.price-a.price);
+            console.log(priceLH);
+
+            //reduce
+            total=products.reduce((sum,product)=>sum+product.price,0);
+            console.log(total);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

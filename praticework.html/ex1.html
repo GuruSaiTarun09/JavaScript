@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+       var items = [
+         { name:'notebook', price: 60, rating: 4.3, category: 'stationery' },
+         { name:'pixel ultra', price: 95000, rating: 4.6, category: 'smartphones' },
+         { name:'oneplus nord x', price: 28000, rating: 4.1, category: 'smartphones' },
+         { name:'realme neo', price: 18000, rating: 3.9, category: 'smartphones' },
+         { name:'fold z pro', price: 135000, rating: 4.0, category: 'smartphones' },
+         { name:'nike air', price: 4500, rating: 4.4, category: 'shoes' },
+         { name:'woodland boots', price: 5200, rating: 4.1, category: 'shoes' },
+         { name:'hoodie', price: 2200, rating: 3.6, category: 'clothing' }
+       ];
+       //map
+       var prices=items.map(item=>item.price+50);
+       console.log(prices);
+       //filter
+       var moblie=items.filter(item=>item.price<70);
+       console.log(moblie);
+       //sort
+       var ratingLH=items.sort((a,b)=>a.rating-b.rating);
+       console.log(ratingLH);
+       //reduce
+       var total=items.reduce((sum,items)=>sum+items.price,0);
+       console.log(total);
+       //find
+       var moblie1=items.find(item=>item.name=="fold z pro");
+       console.log(moblie1);
+       console.log(items.find(item=>item.name==4500));
+       //some
+
+       console.log(items.some(item=>item.price<10));
+       //every
+       console.log(items.every(item=>item.rating>2));
+    </script> 
+  </head>
+  <body></body>
+</html>
